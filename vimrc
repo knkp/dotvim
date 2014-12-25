@@ -1,4 +1,6 @@
 version 6.0
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
