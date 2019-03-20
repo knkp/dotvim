@@ -1,7 +1,21 @@
 Installation:
 
-	clone repository into ~./vim
+	clone repository recursively into ~./vim
 
 Create symlinks:
 
 	ln -s ~/dotfiles/vimrc ~/.vimrc
+
+
+On a debian/ubuntu based os be sure to install the package 
+exuberant-ctags package
+	
+	sudo apt-get install exuberant-ctags
+
+After restarting vim, run the command :Helptags to build 
+docs for all plugins
+
+Current plugins:
+ -nerdtree: navigating directories and files
+ -tagbar: get a layout of source files
+ -syntastic: vim intellisense for source files
