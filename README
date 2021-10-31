@@ -1,6 +1,6 @@
 Installation:
 
-	clone repository recursively into ~./vim
+	clone repository recursively into ~/.vim
 
 Create symlinks:
 
@@ -12,6 +12,15 @@ exuberant-ctags package
 	
 	sudo apt-get install exuberant-ctags
 
+
+YouCompleteMe requires some additional setup:
+
+```
+git submodule update --init --recursive
+python3 install.py --all
+```
+This initializes the dependency ycmd and installs most language completion servers (including rust, javascript, C, and python, among others)  
+
 After restarting vim, run the command :Helptags to build 
 docs for all plugins
 
@@ -19,3 +28,6 @@ Current plugins:
  -nerdtree: navigating directories and files
  -tagbar: get a layout of source files
  -syntastic: vim intellisense for source files
+ -ConqueShell: access bash, mysql, etc from vim buffer
+ -YouCompleteMe: language/library specific suggestions for code completion
+ -CtrlP: Use Ctrl+P to quickly find and open any file using fuzzy logic matching
